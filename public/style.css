@@ -17,7 +17,7 @@
 body {
     position: relative;
     font-family: 'Arial', sans-serif;
-    color: #ffffff; /* Change text color to white or another light color for contrast against the video */
+    color: black; /* Change text color to white or another light color for contrast against the video */
     margin: 0;
     padding: 0;
     display: flex;
@@ -171,4 +171,70 @@ body {
     bottom: auto;
     top: 60px; /* Adjust this value based on the actual height of your primary nav */
   }
+}
+
+.content-container {
+  width: 100%; /* Ensure the container takes up full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children (cards) */
+  padding: 20px 0; /* Add vertical padding */
+}
+
+#furniture-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Full width to allow child items to expand */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the furniture cards */
+}
+
+.furniture-card {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: row; /* Keeps the order of flex items as they appear in the markup */
+  align-items: center; /* Aligns items vertically in the center */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Simple box shadow for styling */
+  border-radius: 10px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures content fits within the card */
+  background: #fff; /* Card background color */
+  margin-bottom: 20px; /* Space between cards */
+  width: 90%; /* Card takes up 80% of the screen width */
+  margin-left: auto; /* Centers the card horizontally */
+  margin-right: auto;
+}
+
+.furniture-image-container,
+.furniture-image {
+  width: 70%; /* Image takes up half the card width */
+  height: 600px; /* Fixed height for all images */
+  object-fit: cover; /* Cover the area, maintaining aspect ratio */
+  border-radius: 0 0 10px 10px; /* Rounded corners on the bottom right */
+}
+
+.furniture-info {
+  padding: 40px; /* Padding within the text area for the content */
+  width: 30%;
+  text-align: left; /* Align text to the left */
+  border-radius: 10px 0 0 10px; /* Rounded corners on the top left */
+}
+
+
+.furniture-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.furniture-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.furniture-id,
+.furniture-seller,
+.furniture-condition {
+  font-size: 0.9rem;
+  color: #888;
 }
