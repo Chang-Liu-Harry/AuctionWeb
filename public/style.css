@@ -1,0 +1,174 @@
+/* Make the video fill the entire screen */
+.video-container {
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
+  overflow: hidden; /* Hide anything that goes out of the container */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the video covers the entire area without stretching */
+    z-index: -1; /* This ensures the video stays behind all other content */
+}
+
+/* Add styles for the body to ensure the text and other elements are visible on top of the video */
+body {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Change text color to white or another light color for contrast against the video */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    justify-content: center; /* Vertically center the content in the viewport */
+    min-height: 100vh; /* Make sure the body takes at least the height of the viewport */
+}
+
+/* Add styles for the text and links to ensure they are visible and styled properly */
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Transparent Navigation Bar */
+.transparent-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* This will stretch the navbar-container to full width */
+  background: transparent;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.transparent-navbar .dropdown,
+.transparent-navbar .navbar-title,
+.transparent-navbar .user-controls {
+  display: flex;
+  align-items: center; /* Align items vertically within each section */
+}
+
+.content-container {
+  background: #fff; /* Background color for the content area */
+  padding: 20px; /* Padding for the content */
+  /* Add more styling as needed */
+}
+
+
+/* Navbar Container (Wrap Dropdown, Title, and User Controls) */
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Spread out the dropdown, title, and user controls */
+  align-items: center;
+  width: 100%; /* Make sure the container takes the full width */
+  padding: 10px 20px; /* Add padding back here */
+}
+
+.transparent-navbar:hover {
+  background-color: #ffffff; /* Change the background to white on hover */
+}
+
+.transparent-navbar:hover .dropbtn,
+.transparent-navbar:hover .navbar-title,
+.transparent-navbar:hover .user-controls a,
+.transparent-navbar:hover .secondary-nav a,
+.transparent-navbar:hover .fas {
+  color: #000000; /* Change text and icons to black on hover */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 24px;
+  color: #ffffff; /* Set default color to white */
+  font-family: 'Cursive', sans-serif;
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+/* User Controls */
+.user-controls a {
+  color: #ffffff; /* Set default color to white */
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+.icon-link {
+  text-decoration: none;
+  color: inherit; 
+  font-size: 20px;
+}
+
+/* Secondary Navigation */
+.secondary-nav {
+  display: flex;
+  justify-content: space-around; /* Spread out the elements evenly */
+  width: 100%; /* Take full width to spread out the links */
+}
+
+.secondary-nav a {
+  text-decoration: none;
+  color: #ffffff; /* Set default color to white */
+  font-weight: bold;
+  font-family: 'Cursive', sans-serif;
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+.fas {
+  color: #ffffff; /* Set default color to white */
+  transition: color 0.3s; /* Smooth transition for color */
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .transparent-navbar {
+    flex-direction: column;
+  }
+  .secondary-nav {
+    order: -1; /* Move secondary nav above on small screens */
+    bottom: auto;
+    top: 60px; /* Adjust this value based on the actual height of your primary nav */
+  }
+}

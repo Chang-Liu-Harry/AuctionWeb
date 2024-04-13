@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/6f88500abb.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show Furniture</title>
+</head>
+<body>
+  
+  <!-- Include the same navbar from index.html -->
+  <div class="navbar transparent">
+    <div class="menu-icon">
+      <i class="fas fa-bars"></i> 
+    </div>
+    <div class="dropdown-menu">
+      <a href="add_furniture.html">Add Furniture</a>
+      <a href="start_auction.html">Start Auction</a>
+      <a href="auction_detail.html">Auction Detail</a>
+      <a href="#" id="showMyFurniture">Show My Furniture</a>
+    </div>
+    <div class="navbar-right">
+      <a href="register.html"><i class="fas fa-user-plus"></i></a>
+      <a href="login.html"><i class="fas fa-sign-in-alt"></i></a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h2>Our Collection</h2>
+    <div class="sorting-buttons">
+      <button id="sortByLikes">Sort by Likes</button>
+      <button id="sortByType">Sort by Type</button>
+    </div>
+    <ul id="furniture-list">
+      <!-- Furniture items will be listed here -->
+    </ul>
+  </div>
+
+  <script src="main.js" defer></script>
+  
+</body>
+</html>
