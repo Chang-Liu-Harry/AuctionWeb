@@ -15,6 +15,7 @@
 
 /* Add styles for the body to ensure the text and other elements are visible on top of the video */
 body {
+    background-color: #f8f6f2; /* Change the background color to a light color for contrast against the video */
     position: relative;
     font-family: 'Arial', sans-serif;
     color: black; /* Change text color to white or another light color for contrast against the video */
@@ -49,6 +50,7 @@ body {
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s; /* Smooth transition for background color */
+  padding-bottom: 30px;
 }
 
 .transparent-navbar .dropdown,
@@ -57,13 +59,6 @@ body {
   display: flex;
   align-items: center; /* Align items vertically within each section */
 }
-
-.content-container {
-  background: #fff; /* Background color for the content area */
-  padding: 20px; /* Padding for the content */
-  /* Add more styling as needed */
-}
-
 
 /* Navbar Container (Wrap Dropdown, Title, and User Controls) */
 .navbar-container {
@@ -173,12 +168,58 @@ body {
   }
 }
 
+.buttons-container button {
+  margin-left: 10px;
+  background-color: transparent; /* No background color for a flat design */
+  border: 2px solid #333; /* Solid border with a neutral color */
+  color: #333; /* Neutral text color */
+  font-family: 'Arial', sans-serif; /* Modern, sans-serif font */
+  font-size: 16px; /* Adequate font size for readability */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  margin: 10px; /* Margin around buttons */
+  cursor: pointer; /* Cursor indicates button */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  outline: none; /* Removes the outline to keep the minimalist look */
+}
+
+/* Hover effect */
+.buttons-container button:hover {
+  background-color: #333; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-color: #333; /* Border color on hover (same as background) */
+}
+
+/* Active button style */
+.buttons-container button:active {
+  transform: scale(0.98); /* Slightly shrink the buttons when clicked */
+}
+
+.buttons-container button:focus {
+  border-color: #555; /* Slightly darker border for focused button */
+}
+
+/* Style adjustments for when the button is disabled, if needed */
+.buttons-container button:disabled {
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+
+.buttons-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align buttons to the right */
+  width: 70%; /* Take up right 50% of the screen */
+  padding-right: 5%; /* Padding from the right edge of the screen */
+  margin-bottom: 25px;
+}
+
 .content-container {
   width: 100%; /* Ensure the container takes up full width */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children (cards) */
-  padding: 20px 0; /* Add vertical padding */
+  background-color: #f8f6f2;
+
 }
 
 #furniture-list {
@@ -189,6 +230,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center-align the furniture cards */
+  background-color: #f8f6f2;
+  margin-bottom: 200px
 }
 
 .furniture-card {
@@ -203,7 +246,14 @@ body {
   width: 90%; /* Card takes up 80% of the screen width */
   margin-left: auto; /* Centers the card horizontally */
   margin-right: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for interaction */
 }
+
+.furniture-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover for depth */
+}
+
 
 .furniture-image-container,
 .furniture-image {
@@ -216,7 +266,7 @@ body {
 .furniture-info {
   padding: 40px; /* Padding within the text area for the content */
   width: 30%;
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Align text to the left */
   border-radius: 10px 0 0 10px; /* Rounded corners on the top left */
 }
 
@@ -237,4 +287,59 @@ body {
 .furniture-condition {
   font-size: 0.9rem;
   color: #888;
+}
+
+
+.site-footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  font-size: 0.8rem;
+  padding: 20px 0; /* Padding on top and bottom */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Space out the footer sections */
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1; /* Ensure each section takes up equal space */
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.footer-section h4 {
+  margin-top: 0; /* Remove top margin from headings */
+  color: #f8f6f2; /* Light color for headings */
+}
+
+.footer-section p, .footer-section ul {
+  margin-bottom: 0; /* Remove bottom margin from paragraphs and lists */
+}
+
+.footer-links {
+  list-style: none; /* Remove bullets from list */
+  padding-left: 0; /* Remove padding from list */
+}
+
+.footer-links li a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* No underline on links */
+}
+
+.footer-links li a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+.footer-bottom {
+  text-align: center; /* Center-align the bottom text */
+  padding-top: 10px; /* Add space above the bottom text */
+  border-top: 1px solid #444; /* Add a subtle border above the bottom text */
 }
