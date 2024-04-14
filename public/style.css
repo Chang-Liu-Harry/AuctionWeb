@@ -343,3 +343,217 @@ body {
   padding-top: 10px; /* Add space above the bottom text */
   border-top: 1px solid #444; /* Add a subtle border above the bottom text */
 }
+
+body.register-page {
+  background-color: #f8f6f2; /* Light background for contrast */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center; /* Center the form in the viewport */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+body.login-page {
+  background-color: #f8f6f2; /* Light background for contrast */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center; /* Center the form in the viewport */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block; /* Ensure inputs are block level to fill width */
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Slightly rounded corners for the input fields */
+}
+
+input[type="checkbox"] {
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for submit button */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Cursor to pointer to indicate clickable */
+}
+
+input[type="submit"]:hover {
+  background-color: #444; /* Darken the button slightly on hover */
+}
+
+/* If you need a success message styled */
+#loginSuccess,
+#RegisterSuccess {
+  color: green;
+  margin-top: 20px;
+}
+
+/* If you need a redirect message or link styled */
+#redirect {
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+}
+
+#login-container {
+  background: #fff; /* White background for the card */
+  padding: 40px; /* Generous padding for aesthetics */
+  border-radius: 10px; /* Rounded corners for the card-like look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Appropriate width */
+  max-width: 400px; /* Maximum width to maintain form proportions */
+  margin: auto; /* Center the card vertically and horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#login-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for more depth */
+  transform: translateY(5%); /* Slightly raise the card on hover */
+}
+
+#register-container {
+  background: #fff; /* White background for the card */
+  padding: 40px; /* Generous padding for aesthetics */
+  border-radius: 10px; /* Rounded corners for the card-like look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Appropriate width */
+  max-width: 400px; /* Maximum width to maintain form proportions */
+  margin: auto; /* Center the card vertically and horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */ /* Push the card down a bit from the center */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#register-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for more depth */
+  transform: translateY(5%); /* Slightly raise the card on hover */
+}
+
+#addFurniture_container{
+  background: #fff; /* White background for the card */
+  padding: 40px; /* Generous padding for aesthetics */
+  border-radius: 10px; /* Rounded corners for the card-like look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Appropriate width */
+  max-width: 400px; /* Maximum width to maintain form proportions */
+  margin: auto; /* Center the card vertically and horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */ /* Push the card down a bit from the center */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#addFurniture_container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for more depth */
+  transform: translateY(5%); /* Slightly raise the card on hover */
+}
+
+#start_auction_container{
+  background: #fff; /* White background for the card */
+  padding: 40px; /* Generous padding for aesthetics */
+  border-radius: 10px; /* Rounded corners for the card-like look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Appropriate width */
+  max-width: 400px; /* Maximum width to maintain form proportions */
+  margin: auto; /* Center the card vertically and horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */ /* Push the card down a bit from the center */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#start_auction_container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for more depth */
+  transform: translateY(5%); /* Slightly raise the card on hover */
+}
+
+#login-container{
+  background: #fff; /* White background for the card */
+  padding: 40px; /* Generous padding for aesthetics */
+  border-radius: 10px; /* Rounded corners for the card-like look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Appropriate width */
+  max-width: 400px; /* Maximum width to maintain form proportions */
+  margin: auto; /* Center the card vertically and horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */ /* Push the card down a bit from the center */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#login-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover for more depth */
+  transform: translateY(5%); /* Slightly raise the card on hover */
+}
+
+form {
+  width: 100%; /* Use full width of the container */
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block; /* Ensure inputs are block level to fill width */
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Slightly rounded corners for the input fields */
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for submit button */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Cursor to pointer to indicate clickable */
+}
+
+input[type="submit"]:hover {
+  background-color: #444; /* Darken the button slightly on hover */
+}
+
+#query-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for submit button */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Cursor to pointer to indicate clickable */
+}
+
+#query-btn:hover {
+  background-color: #444; /* Darken the button slightly on hover */
+}
+
+label {
+  margin-bottom: 5px;
+}

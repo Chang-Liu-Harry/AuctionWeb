@@ -8,14 +8,15 @@
   <script type='module' src='start_auction.js'></script>
 </head>
 <body>
-<form>
-  <label for="furnitureId">Enter furnitureId:</label><br />
-  <input type="text" id="furnitureId" name="furnitureId" /><br />
-  <label for="startPrice">Enter startPrice:</label><br />
-  <input type="text" id="startPrice" name="startPrice" /><br />
-  <input type="submit" value="Submit" />
-</form>
-
-<div id="start_auction_success"></div>
+  <div id="start_auction_container">
+    <form>
+      <label for="furnitureId">Enter furniture Id:</label><br />
+      <input type="text" id="furnitureId" name="furnitureId" /><br />
+      <label for="startPrice">Enter start Price:</label><br />
+      <input type="text" id="startPrice" name="startPrice" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="start_auction_success"></div>
+  </div>
 </body>
 </html>
